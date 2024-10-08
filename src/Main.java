@@ -1,12 +1,16 @@
-class Kaka {
-    String nama = "Wisnu";
+class Keluarga {
+    String ayah;
+
     public void fungsi() {
-        System.out.println("minta duit!");
+        System.out.println("menyiram tanaman");
+    }
+    void panggilAyah(String ayah){
+        this.ayah = ayah;
     }
 }
 
-class Person extends Kaka{
-    final String adik1 = "nanang";
+class Anak extends Keluarga{
+    final String adik1 = "Nanang";
     private String adik;
 
     // Getter
@@ -23,12 +27,13 @@ class Person extends Kaka{
 
 public class Main {
     public static void main(String[] args) {
-        Person Adk = new Person();
-        Adk.setAdik("John");
-        Adk.fungsi();
+        Anak Adk = new Anak();
+        Adk.setAdik("Dudung");
+        Adk.ayah = "wisnu";
 
-        System.out.println(Adk.getAdik());
-        System.out.println(Adk.adik1);
-        System.out.println(Adk.adik1+" "+ Adk.nama );
+        System.out.println("adik pertama : " + Adk.adik1);
+        System.out.println("adik kedua : " + Adk.getAdik());
+        System.out.println("ayah : " + Adk.ayah);
+        Adk.fungsi();
     }
 }
